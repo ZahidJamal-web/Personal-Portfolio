@@ -6,91 +6,38 @@
 
 console.log("MAIN JS LOADED");
 
+window.addEventListener('scroll',()=>{
+    document.querySelector('header')
+    .classList.toggle('scrolled',window.scrollY>50);
+});
+
+
 /* ==========================================
    NAVBAR TOGGLE
 ========================================== */
 
-$(document).ready(function () {
+const menuBtn = document.querySelector('.menu-btn');
+const navbar = document.querySelector('.navbar');
+const menuIcon = menuBtn.querySelector('i');
 
-    $('#menu').click(function () {
-        $(this).toggleClass('fa-times');
-        $('.navbar').toggleClass('nav-toggle');
-    });
+menuBtn.addEventListener('click', () => {
+    navbar.classList.toggle('active');
 
-    $(window).on('scroll load', function () {
-
-        $('#menu').removeClass('fa-times');
-        $('.navbar').removeClass('nav-toggle');
-
-        // Scroll Top Button
-        if (window.scrollY > 60) {
-            document.querySelector('#scroll-top')
-                .classList.add('active');
-        } else {
-            document.querySelector('#scroll-top')
-                .classList.remove('active');
-        }
-
-        // Scroll Spy
-        $('section').each(function () {
-
-            let height = $(this).height();
-            let offset = $(this).offset().top - 200;
-            let top = $(window).scrollTop();
-            let id = $(this).attr('id');
-
-            if (top > offset && top < offset + height) {
-
-                $('.navbar ul li a')
-                    .removeClass('active');
-
-                $('.navbar')
-                    .find(`[href="#${id}"]`)
-                    .addClass('active');
-            }
-        });
-    });
-
-    // ==========================================
-    // SMOOTH SCROLLING
-    // ==========================================
-
-    $('a[href*="#"]').on('click', function (e) {
-
-        e.preventDefault();
-
-        $('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top,
-        }, 500, 'linear');
-
-    });
-
+    if(navbar.classList.contains('active')){
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-xmark');
+    } else {
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+    }
 });
 
-/* ==========================================
-   TAB TITLE CHANGE
-========================================== */
-
-document.addEventListener('visibilitychange', function () {
-
-    if (document.visibilityState === "visible") {
-
-        document.title = "Portfolio | Zahid Jamal";
-
-        $("#favicon").attr(
-            "href",
-            "./assets/images/favicon.jpg"
-        );
-
-    } else {
-
-        document.title = "Come Back | Zahid Jamal";
-
-        $("#favicon").attr(
-            "href",
-            "./assets/images/favicon.jpg"
-        );
-    }
+document.querySelectorAll('.navbar a').forEach(link => {
+    link.addEventListener('click', () => {
+        navbar.classList.remove('active');
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+    });
 });
 
 
@@ -320,10 +267,3 @@ document.onkeydown = function (e) {
         return false;
     }
 };
-
-
-/* ==========================================
-   CONSOLE SUCCESS
-========================================== */
-
-console.log("ALL FEATURES WORKING SUCCESSFULLY");
