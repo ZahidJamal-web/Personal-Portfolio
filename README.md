@@ -6,7 +6,7 @@ A modern, responsive personal portfolio website showcasing my projects, skills, 
 
 ## 🚀 Live Demo
 
-🔗 https://personal-portfolio-gamma-murex-69.vercel.app/
+🔗 https://personal-portfolio-eosin-gamma-98.vercel.app/
 
 ---
 
