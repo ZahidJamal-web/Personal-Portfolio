@@ -338,3 +338,32 @@ document.onkeydown = function (e) {
         return false;
     }
 };
+
+const experience =document.getElementById('experience');
+const popup =document.getElementById('desktop-popup');
+const ok =document.getElementById('popup-ok');
+
+let shown = false;
+window.addEventListener('scroll',
+()=>{
+    if(
+       window.innerWidth <= 768 && !shown
+
+    ){
+        const top = experience
+        .getBoundingClientRect()
+        .top;
+        if(
+           top < window.innerHeight-150
+        ){
+            popup.style.display='flex';
+            shown = true;
+        }
+    }
+});
+
+ok.addEventListener(
+'click',
+()=>{
+   popup.style.display='none';
+});
