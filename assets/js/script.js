@@ -11,6 +11,51 @@ window.addEventListener('scroll',()=>{
     .classList.toggle('scrolled',window.scrollY>50);
 });
 
+const reveals = document.querySelectorAll(".reveal");
+
+function revealSections(){
+
+    reveals.forEach((element)=>{
+
+        const windowHeight = window.innerHeight;
+
+        const elementTop = element.getBoundingClientRect().top;
+
+        const revealPoint = 120;
+
+        if(elementTop < windowHeight - revealPoint){
+
+            element.classList.add("active");
+
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll", revealSections);
+
+revealSections();
+
+const about = document.querySelector("#about");
+
+function showAbout(){
+
+    const triggerPoint = window.innerHeight - 150;
+
+    const aboutTop = about.getBoundingClientRect().top;
+
+    if(aboutTop < triggerPoint){
+
+        about.classList.add("active");
+
+    }
+
+}
+
+window.addEventListener("scroll", showAbout);
+
+showAbout();
 
 /* ==========================================
    NAVBAR TOGGLE
@@ -40,6 +85,32 @@ document.querySelectorAll('.navbar a').forEach(link => {
     });
 });
 
+const rightItems =
+document.querySelectorAll('.reveal-right');
+
+function revealRight(){
+
+    rightItems.forEach(item => {
+
+        const top =
+        item.getBoundingClientRect().top;
+
+        if(top < window.innerHeight - 150){
+
+            item.classList.add('active');
+
+        }
+
+    });
+
+}
+
+window.addEventListener(
+'scroll',
+revealRight
+);
+
+revealRight();
 
 /* ==========================================
    TYPED JS
