@@ -1,9 +1,3 @@
-// ==========================================
-// MAIN.JS
-// Place inside:
-// assets/js/main.js
-// ==========================================
-
 console.log("MAIN JS LOADED");
 
 window.addEventListener('scroll',()=>{
