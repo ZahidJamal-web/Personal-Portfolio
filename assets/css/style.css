@@ -5,9 +5,9 @@ html{
 }
 
 :root {
-    --primary: #8b5cf6;
-    --secondary: #3b82f6;
-    --bg: #52528d;
+    --primary: #030961ef;
+    --secondary: #0061fd;
+    --bg: #030961;
     --glass: rgba(255, 255, 255, 0.03);
     --border: rgba(255, 255, 255, 0.1);
     --text: #ffffff;
@@ -24,7 +24,7 @@ body {
 /* Background Glow */
 .glow-overlay {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background: radial-gradient(circle at 50% 0%, rgba(58, 17, 155, 0.801), transparent 70%);
+    background: radial-gradient(circle at 50% 0%, #030961ef, transparent 70%);
     z-index: -1;
 }
 
@@ -88,7 +88,7 @@ header.scrolled{
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background: linear-gradient(135deg,#4f65dd,#7c02c4);
+    background: linear-gradient(135deg,#123bf1,#010546);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,7 +118,7 @@ header.scrolled{
     height: 2px;
     left: 0;
     bottom: -5px;
-    background:rgb(114, 3, 211);
+    background:#0514f0ef;
     transition: 0.3s;
 }
 
@@ -128,7 +128,7 @@ header.scrolled{
 }
 
 .navbar ul li a:hover{
-    color: rgb(114, 3, 211);
+    color: #0514f0ef;
 }
 
 /* Menu Button */
@@ -200,7 +200,7 @@ header.scrolled{
 }
 
 h1 { font-size: 3.5rem; }
-h1 span{ color: #8b5cf6; }
+h1 span{ color: #0414f0; }
 
 @media screen and (max-width:768px){
 
@@ -244,7 +244,7 @@ h1 span{ color: #8b5cf6; }
     position: relative;
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, rgba(80, 43, 245, 0.973), rgb(114, 3, 211));
+    background: radial-gradient(circle, #0b106e, #0313ff);
     border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
     overflow: hidden; 
     display: flex;
@@ -281,7 +281,7 @@ h1 span{ color: #8b5cf6; }
 
 .home .socials a:hover {
     transform: translateY(-5px); 
-    color: var(--primary);
+    color: #0313ff;
 }
 
 /* Specifically for the Footer Socials if they are also cramped */
@@ -442,7 +442,7 @@ h1 span{ color: #8b5cf6; }
 }
 
 .typing-text{
-    color: #8b5cf6;
+    color: #0414f0;
 }
 
 /* Add space between the individual contact items (Age, Email, etc.) */
@@ -471,7 +471,7 @@ h1 span{ color: #8b5cf6; }
 }
 
 .card-section {
-    padding: 3rem !important; 
+    padding: 1rem !important; 
 }
 
 .card-header {
@@ -483,7 +483,7 @@ h1 span{ color: #8b5cf6; }
 
 .card-header i {
     font-size: 2.3rem;      
-    color: var(--primary);  
+    color: #0414f0;  
 }
 
 .card-header h2 {
@@ -554,7 +554,7 @@ h1 span{ color: #8b5cf6; }
 
 .experience-card-header i {
     font-size: 2.8rem ;      
-    color: var(--primary); 
+    color: #0414f0; 
 }
 
 .experience-card-header h2 {
@@ -811,7 +811,7 @@ h1 span{ color: #8b5cf6; }
 }
 
 .section-title i{
-    color: var(--primary);
+    color: #0414f0;
 }
 
 .section-title span{
@@ -1035,7 +1035,7 @@ h1 span{ color: #8b5cf6; }
 }
 
 .services-section .heading i{
-    color: #00d9ff;
+    color: #0414f0;
 }
 
 /* CONTAINER */
@@ -1267,7 +1267,7 @@ footer span { color: var(--primary); font-weight: 600; }
 
 .footer .box .tagline {
     margin-top: 10px;
-    color: #8b5cf6;
+    color: #2634f5;
     font-weight: 600;
 }
 
@@ -1289,11 +1289,11 @@ footer span { color: var(--primary); font-weight: 600; }
 
 .footer .box .links  i {
     font-size: 0.7rem;
-    color: #8b5cf6;
+    color: #2634f5;
 }
 
 .footer .box .links a:hover {
-    color: #8b5cf6;
+    color: #2634f5;
     padding-left: 8px;
 }
 
@@ -1305,7 +1305,7 @@ footer span { color: var(--primary); font-weight: 600; }
 }
 
 .footer .box .contact-links i {
-    color: #8b5cf6;
+    color: #2634f5;
     width: 20px;
 }
 
@@ -1330,7 +1330,7 @@ footer span { color: var(--primary); font-weight: 600; }
 }
 
 .footer .share a:hover {
-    background: #8b5cf6;
+    background: #2634f5;
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
 }
@@ -1344,7 +1344,7 @@ footer span { color: var(--primary); font-weight: 600; }
 }
 
 .footer .credit span {
-    color: #8b5cf6;
+    color: #2634f5;
     font-weight: 600;
 }
 
@@ -1381,25 +1381,8 @@ footer span { color: var(--primary); font-weight: 600; }
 
 /* Projects.html */
 
-:root{
-    --primary:#00c6ff;
-    --secondary:#0072ff;
-    --bg:#0f172a;
-    --card:#1e293b;
-    --text:#ffffff;
-    --text-light:#cbd5e1;
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Segoe UI,sans-serif;
-}
-
 body{
-    background:var(--bg);
-    color:var(--text);
+    background:#020641;
 }
 
 /* =========================
@@ -1414,7 +1397,8 @@ body{
 .hero h1{
     font-size:3rem;
     margin-bottom:15px;
-    color: rgb(165, 77, 243);
+    color: #0414f0;
+    transform: scale(1.08);
 }
 
 .hero p{
@@ -1431,7 +1415,7 @@ body{
     padding:12px 24px;
     border-radius:50px;
     text-decoration:none;
-    background:linear-gradient(45deg,rgba(80, 43, 245, 0.973), rgb(114, 3, 211));
+    background:linear-gradient(45deg,var(--primary),var(--secondary));
     color:white;
     transition:.3s;
 }
